@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.12" productVersion="12.0.0" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?>
+
+<helpItems xmlns="http://msh" schema="maml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-07-13T15:24:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="en-gb">
+	<command:command>
+		<command:details>
+			<command:name>Add-WindowsUpdate</command:name>
+			<maml:description>
+				<maml:para>Installs updates from Windows update</maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Microsoft Corporation 2009</maml:para>
+			</maml:copyright>
+			<command:verb>Add</command:verb>
+			<command:noun>WindowsUpdate</command:noun>
+			<dev:version>1.00</dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>Downloads and installs Windows Updates according to specified criteria. 
+The default criteria, will install the updates which would be selected in
+the WU User interface.</maml:para>
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Add-WindowsUpdate</maml:name>
+				<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+					<maml:name>Criteria</maml:name>
+					<maml:description>
+						<maml:para>The criteria for selecting the update. The default is to select updates which:
+have not yet been installed, are classed as software, have not been hidden,
+and are flagged as Auto-Selected on Windows Update</maml:para>
+					</maml:description>
+					<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+					<dev:type>
+						<maml:name></maml:name>
+						<maml:uri></maml:uri>
+						<maml:description>
+							<maml:para></maml:para>
+						</maml:description>
+					</dev:type>
+					<dev:defaultValue>"IsInstalled=0 and Type='Software' and IsHidden=0 and AutoSelectOnWebSites=1"</dev:defaultValue>
+				</command:parameter>
+			<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>AutoRestart</maml:name>
+									<maml:description>
+										<maml:para>If specified then updates which require a restart will cause a reboot.
+If not specified the system will need to be restarted manually</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>false</dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+									<maml:name>ShutdownAfterUpdate</maml:name>
+									<maml:description>
+										<maml:para>If Specified, the machine will shutdown at the end of the update process, 
+whether updates require a reboot or not.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>False</dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+									<maml:name>Choose</maml:name>
+									<maml:description>
+										<maml:para>Specifies that the user should be prompted with a list of possible updates for 
+which should be installed</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>False</dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+				<maml:name>Criteria</maml:name>
+				<maml:description>
+					<maml:para>The criteria for selecting the update. The default is to select updates which:
+have not yet been installed, are classed as software, have not been hidden,
+and are flagged as Auto-Selected on Windows Update</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<dev:defaultValue>"IsInstalled=0 and Type='Software' and IsHidden=0 and AutoSelectOnWebSites=1"</dev:defaultValue>
+			</command:parameter>
+		<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>AutoRestart</maml:name>
+										<maml:description>
+											<maml:para>If specified then updates which require a restart will cause a reboot.
+If not specified the system will need to be restarted manually</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>false</dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+										<maml:name>ShutdownAfterUpdate</maml:name>
+										<maml:description>
+											<maml:para>If Specified, the machine will shutdown at the end of the update process, 
+whether updates require a reboot or not.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>False</dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+										<maml:name>Choose</maml:name>
+										<maml:description>
+											<maml:para>Specifies that the user should be prompted with a list of possible updates for which should be installed</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>False</dev:defaultValue>
+									</command:parameter></command:parameters>
+		<command:inputTypes>
+			<command:inputType>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para>Criteria for the installation</maml:para>
+				</maml:description>
+			</command:inputType>
+		</command:inputTypes>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:returnValue>
+		</command:returnValues>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			
+		</maml:alertSet>
+		<command:examples>
+			<command:example>
+				<maml:title>----- Example 1 -----</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>Add-WindowsUpdate -autoRestart -choose</dev:code>
+				<dev:remarks>
+					<maml:para>Downloads a list of updates and prompts the user which should be installed.
+The selected updates are installed and the system rebooted if required. </maml:para>
+				</dev:remarks>
+				<command:commandLines>
+					<command:commandLine>
+						<command:commandText></command:commandText>
+					</command:commandLine>
+				</command:commandLines>
+			</command:example>
+		</command:examples>
+		<maml:relatedLinks>
+			
+		</maml:relatedLinks>
+	</command:command>
+<command:command>
+									<command:details>
+										<command:name>Get-WindowsUpdateConfig</command:name>
+										<maml:description>
+											<maml:para>Returns the current settings for Windows Update</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Get</command:verb>
+										<command:noun>WindowsUpdateConfig</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Returns the current settings for Windows Update</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Get-WindowsUpdateConfig</maml:name>
+											
+										</command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name>Object</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Windows update configuration </maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Get-WindowsUpdateConfig</dev:code>
+											<dev:remarks>
+												<maml:para>Returns information similar to the following
+
+LevelID            : 3
+DayID              : 0
+LevelText          : Before installation
+DayText            : Every Day
+UpdateHour         : 3
+Recommendedupdates : Included</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Set-WindowsUpdateConfig</command:name>
+										<maml:description>
+											<maml:para>Configures windows update for automatic or manual updates</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb></command:verb>
+										<command:noun></command:noun>
+										<dev:version></dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Allows automatic updates to be turned on , with differnet levels of approval, different days and times specified for download, and automatic
+inclusion of recommended updates to be turned on or off</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Set-WindowsUpdateConfig</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>NotificationLevel</maml:name>
+												<maml:description>
+													<maml:para>There are 4 levels, Fully automated (4) Download  automatically confirm before installation (3)  Confirm before download. (2) and Disabled (1) .
+If these are passed as integers 1-4 or as standard strings Scheduled_installation, Before_installation, Before_download,  Disabled
+They will be converted to the Enum data type</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">AutoupdateNotificationLevel</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>Day</maml:name>
+									<maml:description>
+										<maml:para>The day when updates are to be run. If a day of the week or an integer is passed (1=Sunday..7=Saturday) or 0 or "Every_day" is passed it will be 
+converted to the enum data type</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">AutoupdateDay</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+									<maml:name>hour</maml:name>
+									<maml:description>
+										<maml:para>By default Windows Update runs at a random offset after 3:00 AM. 
+This be changed.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Int</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+									<maml:name>IncludeRecommended</maml:name>
+									<maml:description>
+										<maml:para>Determines if recommended updates should be included (or just important ones)</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">boolean </command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>NotificationLevel</maml:name>
+											<maml:description>
+												<maml:para>There are 4 levels, Fully automated (4) Download  automatically confirm before installation (3)  Confirm before download. (2) and Disabled (1) .
+If these are passed as integers 1-4 or as standard strings Scheduled_installation, Before_installation, Before_download,  Disabled
+They will be converted to the Enum data type</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">AutoupdateNotificationLevel</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>Day</maml:name>
+										<maml:description>
+											<maml:para>The day when updates are to be run. If a day of the week or an integer is passed (1=Sunday..7=Saturday) or 0 or "Every_day" is passed it will be 
+converted to the enum data type</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">AutoupdateDay</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+										<maml:name>Hour</maml:name>
+										<maml:description>
+											<maml:para>By default Windows Update runs at a random offset after 3:00 AM. 
+This be changed.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Int</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+										<maml:name>IncludeRecommended</maml:name>
+										<maml:description>
+											<maml:para>Determines if recommended updates should be included (or just important ones)</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">boolean</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example needed ----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code></dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Microsoft.Update.Session on MSDN:  </maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command></helpItems>

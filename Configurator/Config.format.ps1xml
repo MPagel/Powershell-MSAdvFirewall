@@ -1,0 +1,53 @@
+<Configuration>
+    <ViewDefinitions>
+        <View>
+            <Name>Win32_NetworkAdapter</Name>
+            <ViewSelectedBy>
+                <TypeName>System.Management.ManagementObject#Root\cimv2\Win32_NetworkAdapter</TypeName>
+            </ViewSelectedBy>
+            <TableControl>
+                <TableHeaders>
+                    <TableColumnHeader>
+                        <Label>AdapterType</Label>
+                        <Width>18</Width>
+                        <Alignment>Left</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>Name</Label>
+                        <Width>72</Width>
+                        <Alignment>Left</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>MacAddress</Label>
+                        <Width>18</Width>
+                        <Alignment>left</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Width>18</Width>
+                        <Label>Speed</Label>
+                    </TableColumnHeader>
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+			    <TableColumnItem>	
+                                <PropertyName>AdapterType</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Name</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>MacAddress</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+			        <scriptBlock>if ($_.Speed -eq $null) {“Disconnected”} Else {$_.Speed.tostring("#,###")}</scriptBlock>
+                            </TableColumnItem>
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+    </ViewDefinitions>
+</Configuration>
+
+

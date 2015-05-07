@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.12" productVersion="12.0.0" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?>
+
+<helpItems xmlns="http://msh" schema="maml"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-07-13T15:24:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="en-gb">
+	<command:command>
+		<command:details>
+			<command:name>Get-WindowsFeature</command:name>
+			<maml:description>
+				<maml:para>Replaces the cmdlet in the Server manager module, by calling dism.exe</maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Microsoft Corporation 2009</maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>WindowsFeature</command:noun>
+			<dev:version>1.00</dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>Gets a complete list of Windows features known to DISM
+If the Server Manager PowerShell Module is available it should be used instead</maml:para>
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Get-WindowsFeature</maml:name>
+				
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			
+		</command:parameters>
+		<command:inputTypes>
+			<command:inputType>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:inputType>
+		</command:inputTypes>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+					<maml:name>system.object</maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para>Objects which have feature name and Status</maml:para>
+				</maml:description>
+			</command:returnValue>
+		</command:returnValues>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			
+		</maml:alertSet>
+		<command:examples>
+			
+		</command:examples>
+		<maml:relatedLinks>
+			<maml:navigationLink>
+				<maml:linkText></maml:linkText>
+				<maml:uri></maml:uri>
+			</maml:navigationLink>
+		</maml:relatedLinks>
+	</command:command>
+<command:command>
+									<command:details>
+										<command:name>Select-WindowsFeature</command:name>
+										<maml:description>
+											<maml:para>Presents a list of Windows features and prompts the user to make a selection</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Select</command:verb>
+										<command:noun>WindowsFeature</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Presents a list of Windows features and prompts the user to make a selection,
+the selection is returned as on or more strings holding the feature name(s).</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Select-WindowsFeature</maml:name>
+											
+										</command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name>String</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>The names of the selected features </maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title></maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Select-WindowsFeature | Add-WindowsFeature</dev:code>
+											<dev:remarks>
+												<maml:para>Presents a list of Windows features for the user to select from and then 
+installs them</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Add-WindowsFeature</command:name>
+										<maml:description>
+											<maml:para>Adds a Windows feature. </maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Add</command:verb>
+										<command:noun>WindowsFeature</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Adds a Windows feature by calling DISM.EXE. It is preferable to use the 
+cmdlet with the same name in the ServerManager module for PowerShell, if it
+is available.
+ </maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Add-WindowsFeature</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true">
+												<maml:name>featureName</maml:name>
+												<maml:description>
+													<maml:para>The name(s) of the feature(s) to install, as a single string or
+an array of strings.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										</command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>FeatureName</maml:name>
+											<maml:description>
+												<maml:para>The name(s) of the feature(s) to install, as a single string or
+an array of strings.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength=""></command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name>String</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Feature names can be piped into Add-WindowsFeature</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										
+									<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Select-WindowsFeature | Add-WindowsFeature</dev:code>
+											<dev:remarks>
+												<maml:para>Presents a list of Windows features for the user to select from and then 
+installs them</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example></command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Remove-WindowsFeature</command:name>
+										<maml:description>
+											<maml:para>Removes a WindowsFeature</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Remove</command:verb>
+										<command:noun>WindowsFeature</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Removes a Windows feature by calling DISM.EXE. It is preferable to use the 
+cmdlet with the same name in the ServerManager module for PowerShell, if it
+is available.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Remove-WindowsFeature</maml:name>
+											
+										<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true">
+												<maml:name>featureName</maml:name>
+												<maml:description>
+													<maml:para>The name(s) of the feature(s) to install, as a single string or
+an array of strings.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>FeatureName</maml:name>
+											<maml:description>
+												<maml:para>The name(s) of the feature(s) to install, as a single string or
+an array of strings.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength=""></command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name>String</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Feature Names can be piped into Remove-WindowsFeature</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Select-WindowsFeature | Remove-WindowsFeature </dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command></helpItems>

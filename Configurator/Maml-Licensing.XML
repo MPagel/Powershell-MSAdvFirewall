@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.12" productVersion="12.0.0" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?><helpItems xmlns="http://msh" schema="maml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-07-13T15:24:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="en-gb">
+	<command:command>
+		<command:details>
+			<command:name>Get-Registration</command:name>
+			<maml:description>
+				<maml:para>Returns Windows product registration and licensing status</maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Microsoft Corporation 2009</maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>Registration</command:noun>
+			<dev:version>1.00</dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>Returns Windows product registration and licensing status</maml:para>
+		</maml:description>
+
+		<command:examples>
+			<command:example>
+				<maml:title>-----Example 1 -----</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>Get-Registration</dev:code>
+				<dev:remarks>
+					<maml:para>Might return:
+Product: Windows(R) 7, Ultimate edition --- Licensing status: Licensed</maml:para>
+				</dev:remarks>
+				<command:commandLines>
+					<command:commandLine>
+						<command:commandText></command:commandText>
+					</command:commandLine>
+				</command:commandLines>
+			</command:example>
+		</command:examples>
+		<maml:relatedLinks>
+			<maml:navigationLink>
+				<maml:linkText>Register-Computer</maml:linkText>
+				<maml:uri></maml:uri>
+			</maml:navigationLink>
+		<maml:navigationLink>
+										<maml:linkText>SoftwareLicensingProduct WMI class on MSDN: </maml:linkText>
+										<maml:uri>http://msdn.microsoft.com/en-us/library/cc534596(VS.85).aspx</maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+	</command:command>
+<command:command>
+									<command:details>
+										<command:name>Register-Computer</command:name>
+										<maml:description>
+											<maml:para>Activates the Windows OS on-line. </maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Register</command:verb>
+										<command:noun>Computer</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Activates the Windows OS on-line. Optionally also sets a product key</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Register-Computer</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>ProductKey</maml:name>
+												<maml:description>
+													<maml:para>A 25 digit product key written in the form 12ab3-cde45-67fgh-i8jkl-9mnop</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>Server</maml:name>
+									<maml:description>
+										<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>.</dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>ProductKey</maml:name>
+											<maml:description>
+												<maml:para>A 25 digit product key written in the form 12ab3-cde45-67fgh-i8jkl-9mnop</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>Server</maml:name>
+										<maml:description>
+											<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>.</dev:defaultValue>
+									</command:parameter></command:parameters>
+
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 ----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Register-Computer -p "12ab3-cde45-67fgh-i8jkl-9mnop"</dev:code>
+											<dev:remarks>
+												<maml:para>Enters the product key and activates windows on-line. </maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Get-Registration</maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									<maml:navigationLink>
+										<maml:linkText>SoftwareLicensing Service WMI class on MSDN: </maml:linkText>
+										<maml:uri>http://msdn.microsoft.com/en-us/library/cc534597(VS.85).aspx</maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command></helpItems>

@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution productVersion="12.0.0" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" solutionVersion="1.0.0.9" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?><helpItems xmlns="http://msh" schema="maml" > <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details><command:name>Select-Enumtype</command:name><maml:description><maml:para>Returns a value selected by the user from an Enumeration type</maml:para></maml:description><maml:copyright><maml:para>(c) Microsoft Corporation 2009</maml:para></maml:copyright><command:verb>Select</command:verb><command:noun>EnumType</command:noun><dev:version>1.00</dev:version></command:details><maml:description><maml:para>When an enum type has been created to allow easy mapping of names to values,
+this function prompts the user to select one of the names, and returns the
+corresponding  value.</maml:para></maml:description><command:syntax><command:syntaxItem><maml:name>Select-EnumType</maml:name><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false"><maml:name>eType</maml:name><maml:description><maml:para>The Enumeration type to used to build the selection list</maml:para></maml:description><command:parameterValue required="false" variableLength="">system.runtimeType</command:parameterValue><dev:type><maml:name>System.RunTimeType</maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false"><maml:name>Default</maml:name><maml:description><maml:para>The Value returned if nothing is selected from the list (if not specified the function will return null)</maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type><maml:name>Int</maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter></command:syntaxItem></command:syntax><command:parameters><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false"><maml:name>etype </maml:name><maml:description><maml:para>The Enumeration type to used to build the selection list</maml:para></maml:description><command:parameterValue required="false" variableLength="">system.runtimeType</command:parameterValue><dev:type><maml:name>System.RunTimeType</maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false"><maml:name>Default</maml:name><maml:description><maml:para>The Value returned if nothing is selected from the list (if not specified the function will return null)</maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type><maml:name>Int</maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter></command:parameters><command:inputTypes><command:inputType><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><maml:description><maml:para></maml:para></maml:description></command:inputType></command:inputTypes><command:returnValues><command:returnValue><dev:type><maml:name>Int</maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><maml:description><maml:para>Value of the selected item </maml:para></maml:description></command:returnValue></command:returnValues><maml:alertSet><maml:title></maml:title></maml:alertSet><command:examples><command:example><maml:title>---- Example 1 ---- </maml:title><maml:introduction><maml:para></maml:para></maml:introduction><dev:code>$inboundAction = (Select-EnumType fwaction)</dev:code><dev:remarks><maml:para>The user is offered choices "Allow" or "Block" = 0 the two possible options in the fwAction (firewall action) enum, and the variable is set to 1 or 0,
+the associated values based on that choice.</maml:para></dev:remarks><command:commandLines><command:commandLine><command:commandText></command:commandText></command:commandLine></command:commandLines></command:example></command:examples><maml:relatedLinks/></command:command><command:command xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10">
+									<command:details>
+										<command:name>Expand-EnumType</command:name>
+										<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>Gives the descriptions for a value which is made from multiple enum values</maml:para>
+										</maml:description>
+										<maml:copyright xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Expand</command:verb>
+										<command:noun>EnumType</command:noun>
+										<dev:version xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">1.00</dev:version>
+									</command:details>
+									<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										<maml:para>An enum may contain values 1,2,4,8 etc and a value might be 13, meaning
+"This object has the properties represented by 1,4 and 8". Expand-EnumType
+converts 13 into the 3 property names</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Expand-EnumType</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">eType</maml:name>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para>The Enumeration type, this can be passed as a string without the [] symbols.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">Type</command:parameterValue>
+												<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+													<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+													<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+													<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="true" pipelineInput="false">
+									<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Value</maml:name>
+									<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										<maml:para>The Value to be expanded</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Int</command:parameterValue>
+									<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+										<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+										<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+										<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false">
+											<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">etype</maml:name>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para>The Enumeration type, this can be passed as a string without the [] symbols.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">Type</command:parameterValue>
+											<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+												<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="1" required="true" pipelineInput="false">
+										<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Value</maml:name>
+										<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>The Value to be expanded</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Int</command:parameterValue>
+										<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+											<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+											<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Value</maml:name>
+												<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para>An integer</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">String[]</maml:name>
+												<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para>The description(s) for the input Integer</maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title xmlns:maml="http://schemas.microsoft.com/maml/2004/10">----- Example 1 -----</maml:title>
+											<maml:introduction xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">Expand-EnumType FwProfileType (New-object –comObject HNetCfg.FwPolicy2).currentProfileTypes</dev:code>
+											<dev:remarks xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:para xmlns:maml="http://schemas.microsoft.com/maml/2004/10">If FWProfileType has been defined as an Enum representing Firewall profiles, this will return the name(s) of the current profile type(s). </maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										
+									</maml:relatedLinks>
+								</command:command><command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details><command:name>Select-List</command:name><maml:description><maml:para>Returns an object selected by the user from a table of numbered rows.</maml:para></maml:description><maml:copyright><maml:para></maml:para></maml:copyright><command:verb>Select</command:verb><command:noun>List</command:noun><dev:version></dev:version></command:details><maml:description><maml:para>Takes a collection of objects and the list of properties to be displayed.
+This is used to show a table with numbered rows.
+The user is prompted to make either a single or multiple choice, by row
+numbers and the selected objects are returned.  </maml:para></maml:description><command:syntax><command:syntaxItem><maml:name>Select-List</maml:name><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true"><maml:name>InputObject</maml:name><maml:description><maml:para>An array of objects which provide the data for the selection list.
+The data returned comes from this parameter as well. 
+If a single item is provided, it is returned without showing the list.
+  </maml:para></maml:description><command:parameterValue required="True" variableLength=""></command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="true" pipelineInput="false"><maml:name>Property</maml:name><maml:description><maml:para>One or more property names used to format the selection list.
+                </maml:para></maml:description><command:parameterValue required="True" variableLength=""></command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false"><maml:name>Multiple</maml:name><maml:description><maml:para>Specifies that multiple items can be selected.</maml:para></maml:description><command:parameterValue required="false" variableLength="">switch</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>False</dev:defaultValue></command:parameter></command:syntaxItem></command:syntax><command:parameters><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true"><maml:name>InputObject</maml:name><maml:description><maml:para>An array of objects which provide the data for the selection list.
+The data returned comes from this parameter as well. 
+If a single item is provided, it is returned without showing the list.</maml:para></maml:description><command:parameterValue required="True" variableLength=""></command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="true" pipelineInput="false"><maml:name>Property</maml:name><maml:description><maml:para>One or more property names used to format the selection list.</maml:para></maml:description><command:parameterValue required="True" variableLength=""></command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="true"><maml:name>Multiple</maml:name><maml:description><maml:para>Specifies that multiple items can be selected.</maml:para></maml:description><command:parameterValue required="false" variableLength="">switch</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>False</dev:defaultValue></command:parameter></command:parameters><command:inputTypes><command:inputType><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><maml:description><maml:para></maml:para></maml:description></command:inputType></command:inputTypes><command:returnValues><command:returnValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><maml:description><maml:para></maml:para></maml:description></command:returnValue></command:returnValues><maml:alertSet><maml:title></maml:title></maml:alertSet><command:examples><command:example><maml:title>----------  EXAMPLE 1  ----------</maml:title><maml:introduction><maml:para></maml:para></maml:introduction><dev:code>    </dev:code><dev:remarks><maml:para></maml:para></dev:remarks><command:commandLines><command:commandLine><command:commandText></command:commandText></command:commandLine></command:commandLines></command:example></command:examples><maml:relatedLinks/></command:command><command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details><command:name>Select-Item</command:name><maml:description><maml:para>Returns a zero-based integer indicating the user's selection from a list</maml:para></maml:description><maml:copyright><maml:para>(c) Microsoft corporation 2009</maml:para></maml:copyright><command:verb>Select</command:verb><command:noun>Item</command:noun><dev:version></dev:version></command:details><maml:description><maml:para>A list of choices is displayed one after the other, and the users selection
+is returned as a zero-based integer. Can display a caption followed by a
+message before the choices</maml:para></maml:description><command:syntax><command:syntaxItem><maml:name>Select-Item</maml:name><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false"><maml:name>TextChoices</maml:name><maml:description><maml:para>An array of strings, where each one is possible choice. The hot key in each choice must be prefixed with an &amp; sign</maml:para></maml:description><command:parameterValue required="false" variableLength="">string[]</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false"><maml:name>Caption</maml:name><maml:description><maml:para>A caption to appear above the choices.
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">string</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>"Please make a selection"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false"><maml:name>Message</maml:name><maml:description><maml:para>A Message to appear between caption and the choices
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">string</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>"Choices are presented below"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false"><maml:name>Default</maml:name><maml:description><maml:para>The item to be selected by default
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>0</dev:defaultValue></command:parameter></command:syntaxItem><command:syntaxItem>
+									<maml:name>Select-Item</maml:name>
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>hashChoices</maml:name>
+										<maml:description>
+											<maml:para>A hash table where each item is a possible choice. The name part is the text to display as the choice label, and the Value part is the Help text</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">HashTable</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter>
+								<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false"><maml:name>Caption</maml:name><maml:description><maml:para>A caption to appear above the choices.
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">string</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>"Please make a selection"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false"><maml:name>Message</maml:name><maml:description><maml:para>A Message to appear between caption and the choices
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">string</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>"Choices are presented below"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false"><maml:name>Default</maml:name><maml:description><maml:para>The item to be selected by default
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>0</dev:defaultValue></command:parameter></command:syntaxItem></command:syntax><command:parameters><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false"><maml:name>ChoiceList</maml:name><maml:description><maml:para>An array of strings, each one is possible choice. The hot key in each choice must be prefixed with an &amp; sign</maml:para></maml:description><command:parameterValue required="false" variableLength="">string[]</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>hashChoices</maml:name>
+										<maml:description>
+											<maml:para>A hash table where each item is a possible choice. The name part is the text to display as the choice label, and the Value part is the Help text</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">HashTable</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false"><maml:name>Caption</maml:name><maml:description><maml:para>A caption to appear above the choices
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">string</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>"Please make a selection"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false"><maml:name>Message</maml:name><maml:description><maml:para>A Message to appear between caption and the choices
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">string</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>"Choices are presented below"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false"><maml:name>Default</maml:name><maml:description><maml:para>The item to be selected by default
+                </maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><dev:defaultValue>0</dev:defaultValue></command:parameter></command:parameters><command:inputTypes><command:inputType><dev:type><maml:name></maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><maml:description><maml:para></maml:para></maml:description></command:inputType></command:inputTypes><command:returnValues><command:returnValue><dev:type><maml:name>Int</maml:name><maml:uri></maml:uri><maml:description><maml:para></maml:para></maml:description></dev:type><maml:description><maml:para>An integer indicating the selection</maml:para></maml:description></command:returnValue></command:returnValues><maml:alertSet><maml:title></maml:title></maml:alertSet><command:examples><command:example><maml:title>--------------- Example 1 ------------------------</maml:title><maml:introduction><maml:para></maml:para></maml:introduction><dev:code>select-item -Caption "Configuring RemoteDesktop" -Message "Do you want to: " -choice " &amp;amp;Disable Remote Desktop","&amp;amp;Enable Remote Desktop","&amp;amp;Cancel"  -default 1 </dev:code><dev:remarks><maml:para>will display the following </maml:para><maml:para>Configuring RemoteDesktop</maml:para><maml:para>Do you want to: </maml:para><maml:para>[D] Disable Remote Desktop  [E] Enable Remote Desktop  [C] Cancel  [?] Help (default is "E"):</maml:para><maml:para></maml:para><maml:para>The function accepts D, E ,or C as input and returns 0 for Disable, 1 for Enable and 2 for Cancel</maml:para><maml:para></maml:para></dev:remarks><command:commandLines><command:commandLine><command:commandText></command:commandText></command:commandLine></command:commandLines></command:example><command:example><maml:title>--------------- Example 2 ------------------------</maml:title><maml:introduction><maml:para></maml:para></maml:introduction><dev:code>Get-choice @{"&amp;Tea"="A drink made from leaves";"&amp;Coffee"="A drink made from beans"}</dev:code><dev:remarks><maml:para>will display the following </maml:para><maml:para>    Please make a selection</maml:para><maml:para>    Choices are presented below</maml:para><maml:para>   [T] Tea  [C] Coffee  [?] Help (default is "T"):</maml:para><maml:para>Pressing ? will produce help as follows </maml:para><maml:para>T - A drink made from leaves</maml:para><maml:para>C - A drink made from beans</maml:para><maml:para></maml:para></dev:remarks><command:commandLines><command:commandLine><command:commandText></command:commandText></command:commandLine></command:commandLines></command:example></command:examples><maml:relatedLinks><maml:navigationLink><maml:linkText></maml:linkText><maml:uri>http://msdn.microsoft.com/en-us/library/system.management.automation.host.pshostuserinterface.promptforchoice(VS.85).aspx</maml:uri></maml:navigationLink></maml:relatedLinks></command:command><command:command xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"><command:details><command:name>Out-Tree</command:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>Outputs objects in a tree format</maml:para></maml:description><maml:copyright xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>(c) Microsoft corporation 2007-9</maml:para></maml:copyright><command:verb>Out</command:verb><command:noun>Tree</command:noun><dev:version xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">1.00</dev:version></command:details><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The function takes a collection of objects which must have a property to
+display (label), a property identify the position in the tree (path) and
+a property which identifies a node's parent (parent).</maml:para></maml:description><command:syntax><command:syntaxItem><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Out-Tree</maml:name><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Items</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The collection of items to output in the tree</maml:para></maml:description><command:parameterValue required="false" variableLength=""></command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="true" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">StartAt</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The first item in the branch of the tree to output </maml:para></maml:description><command:parameterValue required="false" variableLength=""></command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Path</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property name which identifies a location in the tree.
+It does not need to be a fully qualified path, but must be unique </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Path"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Parent</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property which holds the path of a node's parent. </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Parent"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Label</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property which holds the text to display </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Label"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="5" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Indent</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The function is called recursively and this parameter specifies how far each
+branch of the tree is indented.</maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">0</dev:defaultValue></command:parameter></command:syntaxItem></command:syntax><command:parameters><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Items</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The collection of items to output in the tree</maml:para></maml:description><command:parameterValue required="false" variableLength=""></command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="true" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">StartAt</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The first item in the branch of the tree to output </maml:para></maml:description><command:parameterValue required="false" variableLength=""></command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Path</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property name which identifies a location in the tree.
+It does not need to be a fully qualified path, but must be unique.</maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Path"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Parent</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The value of the path property which identifies a node's parent. </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Parent"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Label</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property which holds the text to display </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Label"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="5" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Indent</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The function is called recursively and this parameter specifies how far each
+branch of the tree is indented. It is intended for internal use only.</maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">0</dev:defaultValue></command:parameter></command:parameters><command:inputTypes><command:inputType><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></command:inputType></command:inputTypes><command:returnValues><command:returnValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></command:returnValue></command:returnValues><maml:alertSet xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:title></maml:title></maml:alertSet><command:examples><command:example><maml:title xmlns:maml="http://schemas.microsoft.com/maml/2004/10">----- Example 1 -----</maml:title><maml:introduction xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:introduction><dev:code xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">out-tree -items (dir -rec | where {$_.mode -like "D*"}) -start (get-item $pwd) -path pspath -parent psparentPath -label name</dev:code><dev:remarks xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:para xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Outputs a tree of subfolders of the current folder, the starting item is
+the current folder, and the path for each item is the PsPath property, its
+parent is in the PsParentPath propery. The name property is output</maml:para></dev:remarks><command:commandLines><command:commandLine><command:commandText></command:commandText></command:commandLine></command:commandLines></command:example></command:examples><maml:relatedLinks xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:navigationLink><maml:linkText>Select-Tree</maml:linkText><maml:uri></maml:uri></maml:navigationLink></maml:relatedLinks></command:command><command:command xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"><command:details><command:name>Select-Tree</command:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>Allows the user to select from objects in a tree format</maml:para></maml:description><maml:copyright xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>(c) Microsoft corporation 2007-9</maml:para></maml:copyright><command:verb>Select</command:verb><command:noun>Tree</command:noun><dev:version xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">1.00</dev:version></command:details><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The function takes a collection of objects which must have a property to
+display (label), a property identify the position in the tree (path) and
+a property which identifies a node's parent (parent).</maml:para></maml:description><command:syntax><command:syntaxItem><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Select-Tree</maml:name><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Items</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The collection of items to output in the tree</maml:para></maml:description><command:parameterValue required="false" variableLength=""></command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="true" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">StartAt</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The first item in the branch of the tree to output </maml:para></maml:description><command:parameterValue required="false" variableLength=""></command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Path</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property name which identifies a location in the tree.
+It does not need to be a fully qualified path, but must be unique </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Path"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Parent</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property which holds the path of a node's parent. </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Parent"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Label</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property which holds the text to display </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Label"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="5" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Indent</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The function is called recursively and this parameter specifies how far each
+branch of the tree is indented.</maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">0</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="6" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Multiple</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>Determines whether a single or multiple selection is to made from the tree</maml:para></maml:description><command:parameterValue required="false" variableLength="">Switch</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">False</dev:defaultValue></command:parameter></command:syntaxItem></command:syntax><command:parameters><command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Items</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The collection of items to output in the tree</maml:para></maml:description><command:parameterValue required="false" variableLength=""></command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="1" required="true" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">StartAt</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The first item in the branch of the tree to output </maml:para></maml:description><command:parameterValue required="false" variableLength=""></command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Path</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property name which identifies a location in the tree.
+It does not need to be a fully qualified path, but must be unique.</maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Path"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Parent</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The value of the path property which identifies a node's parent. </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Parent"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Label</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The name of the property which holds the text to display </maml:para></maml:description><command:parameterValue required="false" variableLength="">String</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">"Label"</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="5" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Indent</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>The function is called recursively and this parameter specifies how far each
+branch of the tree is indented. It is intended for internal use only.</maml:para></maml:description><command:parameterValue required="false" variableLength="">Int</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">0</dev:defaultValue></command:parameter><command:parameter globbing="false" variableLength="" position="6" required="false" pipelineInput="false"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Multiple</maml:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>Determines whether a single or multiple selection is to made from the tree</maml:para></maml:description><command:parameterValue required="false" variableLength="">Switch</command:parameterValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">False</dev:defaultValue></command:parameter></command:parameters><command:inputTypes><command:inputType><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></command:inputType></command:inputTypes><command:returnValues><command:returnValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></command:returnValue></command:returnValues><maml:alertSet xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:title></maml:title></maml:alertSet><command:examples/><maml:relatedLinks xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:navigationLink><maml:linkText>Out-Tree</maml:linkText><maml:uri></maml:uri></maml:navigationLink></maml:relatedLinks></command:command><command:command xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"><command:details><command:name>Test-Admin</command:name><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>Checks to see if the current session has administrator privileges </maml:para></maml:description><maml:copyright xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>(c) Microsoft Corporation 2009</maml:para></maml:copyright><command:verb>Test</command:verb><command:noun>Admin</command:noun><dev:version xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">1.00</dev:version></command:details><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>Checks to see if the current session has administrator privileges  </maml:para></maml:description><command:syntax><command:syntaxItem>
+									<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">test-admin</maml:name>
+									
+								</command:syntaxItem></command:syntax><command:parameters/><command:inputTypes><command:inputType><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></command:inputType></command:inputTypes><command:returnValues><command:returnValue><dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Boolean</maml:name><maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:description></dev:type><maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para>$true if the session was started as administrator</maml:para></maml:description></command:returnValue></command:returnValues><maml:alertSet xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:title></maml:title></maml:alertSet><command:examples><command:example><maml:title xmlns:maml="http://schemas.microsoft.com/maml/2004/10">----- Example 1 -----</maml:title><maml:introduction xmlns:maml="http://schemas.microsoft.com/maml/2004/10"><maml:para></maml:para></maml:introduction><dev:code xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">Test-Admin</dev:code><dev:remarks xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><maml:para xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Returns true if the session was started as administrator, false otherwise</maml:para></dev:remarks><command:commandLines><command:commandLine><command:commandText></command:commandText></command:commandLine></command:commandLines></command:example></command:examples><maml:relatedLinks xmlns:maml="http://schemas.microsoft.com/maml/2004/10"/></command:command><command:command xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10">
+									<command:details>
+										<command:name>Convert-DiskIDtoDrive</command:name>
+										<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>Converts a logical disk index to a drive letter.</maml:para>
+										</maml:description>
+										<maml:copyright xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Convert</command:verb>
+										<command:noun>DiskIdToDrive</command:noun>
+										<dev:version xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">1.00</dev:version>
+									</command:details>
+									<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										<maml:para>Converts a logical disk index to a drive letter.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Convert-DiskIDtoDrive</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">DiskIndex</maml:name>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para>An integer representing the index of the logical disk</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">Int</command:parameterValue>
+												<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+													<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+													<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+													<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue>
+											</command:parameter>
+										</command:syntaxItem>
+									<command:syntaxItem>
+									<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Convert-DiskIDtoDrive</maml:name>
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+										<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">InputObject</maml:name>
+										<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>A WMI object representing a physical disk </maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">System.Management.ManagementObject</command:parameterValue>
+										<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+											<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+											<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue>
+									</command:parameter>
+								</command:syntaxItem></command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+											<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">DiskIndex</maml:name>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para>An integer representing the index of the logical disk</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">Int</command:parameterValue>
+											<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+												<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+										<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">InputObject</maml:name>
+										<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>A WMI object representing a physical disk </maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">System.Management.ManagementObject</command:parameterValue>
+										<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+											<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+											<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"></dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+												<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+												<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title xmlns:maml="http://schemas.microsoft.com/maml/2004/10">-----  Example 1  -----</maml:title>
+											<maml:introduction xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">PS &gt; Convert-DiskIDToDrive 0</dev:code>
+											<dev:remarks xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:para xmlns:maml="http://schemas.microsoft.com/maml/2004/10">Returns the drive letters of the partitions on the specified disk. For Example C:, D:     </maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										
+									</maml:relatedLinks>
+								</command:command><command:command xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10">
+									<command:details>
+										<command:name>Get-FirstAvailableDriveLetter</command:name>
+										<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>Returns a CHAR indicating the first avaialable drive letter.</maml:para>
+										</maml:description>
+										<maml:copyright xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Get</command:verb>
+										<command:noun>FirstAvailableDriveLetter</command:noun>
+										<dev:version xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">1.00</dev:version>
+									</command:details>
+									<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										<maml:para>Returns a CHAR indicating the first avaialable drive letter.</maml:para>
+									</maml:description>
+									<command:syntax>
+										
+									</command:syntax>
+									<command:parameters>
+										
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:name>
+												<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+												<maml:name xmlns:maml="http://schemas.microsoft.com/maml/2004/10">CHAR</maml:name>
+												<maml:uri xmlns:maml="http://schemas.microsoft.com/maml/2004/10"></maml:uri>
+												<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+												<maml:para>First available drive letter</maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										
+									</command:examples>
+									<maml:relatedLinks xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+										
+									</maml:relatedLinks>
+								</command:command></helpItems>

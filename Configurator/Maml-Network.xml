@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.12" productVersion="12.0.0" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?><helpItems xmlns="http://msh" schema="maml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-07-13T15:24:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="en-gb">
+	<command:command>
+		<command:details>
+			<command:name>Get-NetworkAdapter</command:name>
+			<maml:description>
+				<maml:para>Gets the network adapters on the local computer or a remote one</maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Microsoft Corporation 2009</maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>NetworkAdapter</command:noun>
+			<dev:version>1.00</dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>Gets the network adapters on the local computer or a remote one. No filter is
+applied to the list other than optionally selecting a NIC by name</maml:para>
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Get-NetworkAdapter</maml:name>
+				<command:parameter globbing="true" variableLength="" position="0" required="false" pipelineInput="false">
+					<maml:name>Name</maml:name>
+					<maml:description>
+						<maml:para>The name of a network adapter to get. Wildcards are supported; because the
+adapters are fetched using WMI the WildCard is %, * will be converted to %. </maml:para>
+					</maml:description>
+					<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+					<dev:type>
+						<maml:name></maml:name>
+						<maml:uri></maml:uri>
+						<maml:description>
+							<maml:para></maml:para>
+						</maml:description>
+					</dev:type>
+					<dev:defaultValue>%</dev:defaultValue>
+				</command:parameter>
+			<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>Server</maml:name>
+									<maml:description>
+										<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>.</dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter globbing="true" variableLength="" position="0" required="false" pipelineInput="false">
+				<maml:name>Name</maml:name>
+				<maml:description>
+					<maml:para>The name of a network adapter to get. Wildcards are supported; because the
+adapters are fetched using WMI the WildCard is %, * will be converted to %. </maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<dev:defaultValue>%</dev:defaultValue>
+			</command:parameter>
+		<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>Server</maml:name>
+										<maml:description>
+											<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>.</dev:defaultValue>
+									</command:parameter></command:parameters>
+		<command:inputTypes>
+			<command:inputType>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:inputType>
+		</command:inputTypes>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+					<maml:name>System.Management.ManagementObject#Root\cimv2\Win32_NetworkAdapter</maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:returnValue>
+		</command:returnValues>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			
+		</maml:alertSet>
+		<command:examples>
+			<command:example>
+				<maml:title>--- Example needed ----</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code></dev:code>
+				<dev:remarks>
+					<maml:para></maml:para>
+				</dev:remarks>
+				<command:commandLines>
+					<command:commandLine>
+						<command:commandText></command:commandText>
+					</command:commandLine>
+				</command:commandLines>
+			</command:example>
+		</command:examples>
+		<maml:relatedLinks>
+			<maml:navigationLink>
+				<maml:linkText>Win32_NetworkAdapter Class on MSDN</maml:linkText>
+				<maml:uri>http://msdn.microsoft.com/en-us/library/aa394216(VS.85).aspx</maml:uri>
+			</maml:navigationLink>
+		<maml:navigationLink>
+										<maml:linkText>Select-NetworkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Get-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Set-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+	</command:command>
+<command:command>
+									<command:details>
+										<command:name>Select-NetworkAdapter</command:name>
+										<maml:description>
+											<maml:para>Shows a list to allow the user to select an IP-Enabled NIC</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Select</command:verb>
+										<command:noun>NetworkAdapter</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>If more than one Network adapter is enabled for IP, a list is show and the
+adapter selected by the user is returned. If there is only one is enabled for
+IP it is returned.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Select-NetworkAdapter</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>Server</maml:name>
+												<maml:description>
+													<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue>.</dev:defaultValue>
+											</command:parameter>
+										</command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>Server</maml:name>
+											<maml:description>
+												<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue>.</dev:defaultValue>
+										</command:parameter>
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name>System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>--- Example needed</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code></dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											<maml:para></maml:para></dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										
+									<maml:navigationLink>
+				<maml:linkText>Win32_NetworkAdapter Class on MSDN</maml:linkText>
+				<maml:uri>http://msdn.microsoft.com/en-us/library/aa394216(VS.85).aspx</maml:uri>
+			</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Select-NetworkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Get-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Set-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Get-IpConfig</command:name>
+										<maml:description>
+											<maml:para>Returns objects with similar information to the familiar "IPconfig" command</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Get</command:verb>
+										<command:noun>IpConfig</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>The command will accept one or more Network adapters as a parameter, and will return  Win32_NetworkAdapterConfiguration WMI Objects.
+It can take parameters to produce formatted output. </maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name></maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+												<maml:name>Nic</maml:name>
+												<maml:description>
+													<maml:para>Either a WMI object representing a Network-Adapter, a string object 
+containing a Network-Adapter name (which may contain wildcards) or an array of such objects. This can be passed via the pipeline.
+If nothing is passed all Adapters are queried.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+												<maml:name>Server</maml:name>
+												<maml:description>
+													<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue>.</dev:defaultValue>
+											</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+									<maml:name>Table</maml:name>
+									<maml:description>
+										<maml:para>A list of property names to be used to format the output as a table.
+The names can include the Property Set names, "DHCP", "DNS", "IP",
+"PSStatus" and  "WINS"</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+									<maml:name>List</maml:name>
+									<maml:description>
+										<maml:para>A list of property names to be used to format the output as a list. 
+The names can include the Property Set names, "DHCP", "DNS", "IP",
+"PSStatus" and  "WINS" and a psuedo-Property Set "All"
+If both table and list are specified, a list is displayed.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false">
+									<maml:name>All</maml:name>
+									<maml:description>
+										<maml:para>A short form for -List *</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>False</dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+											<maml:name>Nic</maml:name>
+											<maml:description>
+												<maml:para>Either a WMI object representing a Network-Adapter, a string object 
+containing a Network-Adapter name (which may contain wildcards) or an array of such objects. This can be passed via the pipeline.
+If nothing is passed all Adapters are queried.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength=""></command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>Server</maml:name>
+										<maml:description>
+											<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>.</dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+										<maml:name>Table</maml:name>
+										<maml:description>
+											<maml:para>A list of property names to be used to format the output as a table.
+The names can include the Property Set names, "DHCP", "DNS", "IP",
+"PSStatus" and  "WINS"</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+										<maml:name>List</maml:name>
+										<maml:description>
+											<maml:para>A list of property names to be used to format the output as a list. 
+The names can include the Property Set names, "DHCP", "DNS", "IP",
+"PSStatus" and  "WINS" and a psuedo-Property Set "All"
+If both table and list are specified, a list is displayed.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false">
+										<maml:name>All</maml:name>
+										<maml:description>
+											<maml:para>A short form for -List *</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>False</dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name>System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Network adapters can be piped into Get-IpConfig</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name>System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapterConfiguration</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>$nics | Get-IPConfig</dev:code>
+											<dev:remarks>
+												<maml:para>Will Return information about IP-Enabled adapters stored in $nics .
+If not piped into another command or stored in a variable,this will be formatted following Powershell's Defaults</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									<command:example>
+										<maml:title>----- Example 2 -----</maml:title>
+										<maml:introduction>
+											<maml:para></maml:para>
+										</maml:introduction>
+										<dev:code>get-ipconfig "intel*" -table "ip"</dev:code>
+										<dev:remarks>
+											<maml:para>Will get the configuration data for all network adapters with names which
+start "Intel". This will be output as a table using the property named 
+"IP"; in fact "IP" is the name of a Property-Set which will expanded by the
+Format-Table cmdlet. </maml:para>
+										</dev:remarks>
+										<command:commandLines>
+											<command:commandLine>
+												<command:commandText></command:commandText>
+											</command:commandLine>
+										</command:commandLines>
+									</command:example><command:example>
+										<maml:title>----- Example 3 -----</maml:title>
+										<maml:introduction>
+											<maml:para></maml:para>
+										</maml:introduction>
+										<dev:code>Get-IPConfig -list all</dev:code>
+										<dev:remarks>
+											<maml:para>Will return information about all IPEnabled adapters, in a list format.
+"All" is handled specially. * may be used to mean "Every Property". 
+Property names and Property-Set names can be used as in the Table Example.</maml:para>
+										</dev:remarks>
+										<command:commandLines>
+											<command:commandLine>
+												<command:commandText></command:commandText>
+											</command:commandLine>
+										</command:commandLines>
+									</command:example></command:examples>
+									<maml:relatedLinks>
+										
+									<maml:navigationLink>
+				<maml:linkText>Win32_NetworkAdapterConfiguration Class on MSDN</maml:linkText>
+				<maml:uri>http://msdn.microsoft.com/en-us/library/aa394217(VS.85).aspx</maml:uri>
+			</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Select-NetworkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Set-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Set-IPConfig</command:name>
+										<maml:description>
+											<maml:para>Sets the IP Configuration for a network adapter</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Set</command:verb>
+										<command:noun>Ipconfig</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>The command will accept Network adapters as a parameter, and set their IPv4 or
+IpV6 address, subnet, gateway, WINS and DNS servers and enabled DHCP.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Set-IPConfig</maml:name>
+											<command:parameter globbing="true" variableLength="" position="0" required="false" pipelineInput="true">
+												<maml:name>Nic</maml:name>
+												<maml:description>
+													<maml:para>Either a WMI object representing a Network-Adapter, a string object 
+containing a Network-Adapter name. A name may contain wildcards but must resolve to one adapter. This can be passed via the pipeline.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>IPAddress</maml:name>
+									<maml:description>
+										<maml:para>An array of strings containing IPv4 and/or IPv6 address</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+									<maml:name>SubnetMask</maml:name>
+									<maml:description>
+										<maml:para>An array of strings containing the Subnet mask(s) the corresponding to each IP address. For IPv4 it is dotted decimal notation. For IPv6 it is number of bits.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+									<maml:name>Gateway</maml:name>
+									<maml:description>
+										<maml:para>An array of strings containing the default gateway(s) to be used.
+Note that although windows supports setting different metrics for routes, the function does not.
+This can be done using route.exe if required
+    </maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false">
+									<maml:name>WinsPrimaryServer</maml:name>
+									<maml:description>
+										<maml:para>A single string containing the address of the Primary WINS server in dotted
+decimal notation.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="5" required="false" pipelineInput="false">
+									<maml:name>WINSSecondaryServer</maml:name>
+									<maml:description>
+										<maml:para>A single string containing the address of the Secondary WINS server in dotted
+decimal notation</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="6" required="false" pipelineInput="false">
+									<maml:name>DNSServerSearchOrder</maml:name>
+									<maml:description>
+										<maml:para>An array of strings containing the IPv4 or IPv6 addresses of DNS Servers in
+order of preference</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">string[]</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="7" required="false" pipelineInput="false">
+												<maml:name>Server</maml:name>
+												<maml:description>
+													<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue>.</dev:defaultValue>
+											</command:parameter><command:parameter globbing="false" variableLength="" position="8" required="false" pipelineInput="false">
+									<maml:name>EnableDHCP</maml:name>
+									<maml:description>
+										<maml:para>If specified the networks are configured to use DHCP for both IPV4 and IPV6</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>False</dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+											<maml:name>Nic</maml:name>
+											<maml:description>
+												<maml:para>Either a WMI object representing a Network-Adapter, a string object 
+containing a Network-Adapter name. A name may contain wildcards but must resolve to one adapter. This can be passed via the pipeline.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength=""></command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter><command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>IPAddress</maml:name>
+										<maml:description>
+											<maml:para>An array of strings containing IPv4 and/or IPv6 address</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+										<maml:name>SubnetMask</maml:name>
+										<maml:description>
+											<maml:para>An array of strings containing the Subnet mask(s) the corresponding to each IP address. For IPv4 it is dotted decimal notation. For IPv6 it is number of bits.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+										<maml:name>Gateway</maml:name>
+										<maml:description>
+											<maml:para>An array of strings containing the default gateway(s) to be used.
+Note that although windows supports setting different metrics for routes, the function does not.
+This can be done using route.exe if required</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String[]</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false">
+										<maml:name>WinsPrimaryServer</maml:name>
+										<maml:description>
+											<maml:para>A single string containing the address of the Primary WINS server in dotted
+decimal notation.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="5" required="false" pipelineInput="false">
+										<maml:name>WINSSecondaryServer</maml:name>
+										<maml:description>
+											<maml:para>A single string containing the address of the Secondary WINS server in dotted
+decimal notation</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="6" required="false" pipelineInput="false">
+										<maml:name>DNSServerSearchOrder</maml:name>
+										<maml:description>
+											<maml:para>An array of strings containing the IPv4 or IPv6 addresses of DNS Servers in
+order of preference</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string[]</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="7" required="false" pipelineInput="false">
+										<maml:name>Server</maml:name>
+										<maml:description>
+											<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>.</dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="8" required="false" pipelineInput="false">
+										<maml:name>EnableDHCP</maml:name>
+										<maml:description>
+											<maml:para>If specified the networks are configured to use DHCP for both IPV4 and IPV6</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>False</dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name>System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Network Adapters can be piped into Set-IpConfig</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>---- Example Needed ---- </maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code></dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Win32_NetworkAdapterConfiguration WMI Class on MSDN</maml:linkText>
+											<maml:uri>http://msdn.microsoft.com/en-us/library/aa394217(VS.85).aspx Win32_NetworkAdapterConfiguration Class</maml:uri>
+										</maml:navigationLink>
+									<maml:navigationLink>
+										<maml:linkText>New-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Remove-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Get-Ipconfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Get-NetworkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Select-networkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>New-IpConfig</command:name>
+										<maml:description>
+											<maml:para>Performs the equivalent of Ipconfig /renew</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>New</command:verb>
+										<command:noun>IpConfig</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Gets a new IP address from a DHCP Servre</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>New-IpConfig</maml:name>
+											
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+												<maml:name>Nic</maml:name>
+												<maml:description>
+													<maml:para>Either a WMI object representing a Network-Adapter, a string object 
+containing a Network-Adapter name (which may contain wildcards) or an array of such objects. This can be passed via the pipeline.
+If nothing is passed all Adapters are queried.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+											<maml:name>Nic</maml:name>
+											<maml:description>
+												<maml:para>Either a WMI object representing a Network-Adapter, a string object 
+containing a Network-Adapter name (which may contain wildcards) or an array of such objects. This can be passed via the pipeline.
+If nothing is passed all Adapters are queried.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength=""></command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name>System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Network Adapters can be piped into New-IpConfig</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>--- Example needed</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code></dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										
+									<maml:navigationLink>
+											<maml:linkText>Win32_NetworkAdapterConfiguration WMI Class on MSDN</maml:linkText>
+											<maml:uri>http://msdn.microsoft.com/en-us/library/aa394217(VS.85).aspx Win32_NetworkAdapterConfiguration Class</maml:uri>
+										</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Set-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Remove-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Get-Ipconfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Get-NetworkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Select-networkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Remove-IpConfig</command:name>
+										<maml:description>
+											<maml:para>Performs the equivalent of Ipconfig /release</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Remove</command:verb>
+										<command:noun>IpConfig</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Release an IP address previously obtained from a DHCP Servre</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>New-IpConfig</maml:name>
+											
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+												<maml:name>Nic</maml:name>
+												<maml:description>
+													<maml:para>Either a WMI object representing a Network-Adapter, a string object 
+containing a Network-Adapter name (which may contain wildcards) or an array of such objects. This can be passed via the pipeline.
+If nothing is passed all Adapters are queried.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="true">
+											<maml:name>Nic</maml:name>
+											<maml:description>
+												<maml:para>Either a WMI object representing a Network-Adapter, a string object 
+containing a Network-Adapter name (which may contain wildcards) or an array of such objects. This can be passed via the pipeline.
+If nothing is passed all Adapters are queried.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength=""></command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name>System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Network Adapters can be piped into Remove-IpConfig</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>--- Example needed</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code></dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										
+									<maml:navigationLink>
+											<maml:linkText>Win32_NetworkAdapterConfiguration WMI Class on MSDN</maml:linkText>
+											<maml:uri>http://msdn.microsoft.com/en-us/library/aa394217(VS.85).aspx Win32_NetworkAdapterConfiguration Class</maml:uri>
+										</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Set-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>New-IpConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Get-Ipconfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Get-NetworkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+										<maml:linkText>Select-networkAdapter</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command></helpItems>

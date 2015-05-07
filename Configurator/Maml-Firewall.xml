@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.9" productVersion="12.0.0" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?>
+<helpItems xmlns="http://msh" schema="maml" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-07-13T15:24:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="en-gb">
+	<command:command>
+		<command:details>
+			<command:name>Get-FirewallProfile</command:name>
+			<maml:description>
+				<maml:para>Returns the type(s) of network the firewall is connected to </maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Microsoft Corporation 2009</maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>FirewallProfile</command:noun>
+			<dev:version>1.00</dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>Firewall settings can apply to any combination of Profile types, Domain (1),
+Private (2) and Public (4). Each network the computer connects to is flagged
+as belonging to one of these types. The function returns the type(s) in use. </maml:para>
+		</maml:description>
+		<command:syntax>
+			
+		</command:syntax>
+		<command:parameters>
+			
+		</command:parameters>
+		<command:inputTypes>
+			<command:inputType>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:inputType>
+		</command:inputTypes>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+					<maml:name>String[]</maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para>Name(s) of the profile(s) in use</maml:para>
+				</maml:description>
+			</command:returnValue>
+		</command:returnValues>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			
+		</maml:alertSet>
+		<command:examples>
+			<command:example>
+				<maml:title>----- Example 1 -----</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>Get-FirewallProfile</dev:code>
+				<dev:remarks>
+					<maml:para>Returns "Private" if the firewall is connected to  a private network</maml:para>
+				</dev:remarks>
+				<command:commandLines>
+					<command:commandLine>
+						<command:commandText></command:commandText>
+					</command:commandLine>
+				</command:commandLines>
+			</command:example>
+		</command:examples>
+		<maml:relatedLinks>
+			<maml:navigationLink>
+				<maml:linkText>FWProfileType information on MSDN: </maml:linkText>
+				<maml:uri>http://msdn.microsoft.com/en-us/library/aa366303(VS.85).aspx</maml:uri>
+			</maml:navigationLink>
+		<maml:navigationLink>
+										<maml:linkText>Expand-EnumType</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+	</command:command>
+<command:command>
+									<command:details>
+										<command:name>Get-FirewallConfig</command:name>
+										<maml:description>
+											<maml:para>Returns objects representing the configuration for the 3 firewall profiles</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Get</command:verb>
+										<command:noun>FirewallConfig</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>The Firewall can behave differently depending on the profile designated
+for a connected network (Domain, Private or Public). The firewall can be
+enabled or disabled, can be set to block inbound traffic despite any
+'allow' rules, and the default inbound and outbound behaviour can be set 
+(block in the absence of an 'allow' rule or allow in the absence of
+a 'block' rule). Get-FirewallConfig returns the settings for the 3 profiles
+types.</maml:para>
+									</maml:description>
+									<command:syntax>
+										
+									</command:syntax>
+									<command:parameters>
+										
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name>Object[]</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Get-firewallConfig | Format-Table -auto</dev:code>
+											<dev:remarks>
+												<maml:para>Might return the following:
+Network_Type Firewall_Enabled Block_All_Inbound Default_In Default_Out
+------------ ---------------- ----------------- ---------- -----------
+      Domain             True             False      Block       Allow
+     Private             True             False      Block       Allow
+      Public             True             False      Block       Allow</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+										<maml:linkText>Set-FirewallConfig</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink><maml:navigationLink>
+											<maml:linkText>FWPolicy object information on MSDN</maml:linkText>
+											<maml:uri>http://msdn.microsoft.com/en-us/library/aa365309(VS.85).aspx</maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Set-FirewallConfig</command:name>
+										<maml:description>
+											<maml:para>Sets firewall configuration for a profile</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>set</command:verb>
+										<command:noun>FirewallConfig</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>The Firewall can behave differently depending on the profile designated
+for a connected network (Domain, Private or Public). The firewall can be
+enabled or disabled, can be set to block inbound traffic despite any
+'allow' rules, and the default inbound and outbound behaviour can be set 
+(block in the absence of an 'allow' rule or allow in the absence of
+a 'block' rule). Set-FirewallConfig modifies the settings for the a profile.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Set-FirewallConfig</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false">
+												<maml:name>Profile</maml:name>
+												<maml:description>
+													<maml:para>The profile type, if an integer 1,2, or 4 or a string "Domain" "Private"
+or "Public" is passed, the value will be converted to the FwProfile Enum type.</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">FwProfileType</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>Enabled</maml:name>
+									<maml:description>
+										<maml:para>Whether the firewall should be enabled for this profile. 
+If not specified the value will not be changed.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Boolean</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+									<maml:name>Block</maml:name>
+									<maml:description>
+										<maml:para>Whether the Firewall should block all inbound traffic for this profile.
+If not specified the value will not be changed.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Boolean</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+									<maml:name>InboundAction</maml:name>
+									<maml:description>
+										<maml:para>The default behaviour for Inbound traffic with no rule. If an integer 0 or 1
+or a string "Block" or "Allow" is passed, the value will be converted to the
+FwAction Enum type.
+If not specified the value will not be changed.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">FWAction</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false">
+									<maml:name>OutboundAction</maml:name>
+									<maml:description>
+										<maml:para>The default behaviour for Outbound traffic with no rule. If an integer 0 or 1
+or a string "Block" or "Allow" is passed, the value will be converted to the
+FwAction Enum type.
+If not specified the value will not be changed.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">FWAction</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false">
+											<maml:name>Profile</maml:name>
+											<maml:description>
+												<maml:para>The profile type, if an integer 1,2, or 4 or a string "Domain" "Private"
+or "Public" is passed, the value will be converted to the FwProfile Enum type.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">FwProfileType</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>Enabled</maml:name>
+										<maml:description>
+											<maml:para>Whether the firewall should be enabled for this profile. 
+If not specified the value will not be changed</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Boolean</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+										<maml:name>Block</maml:name>
+										<maml:description>
+											<maml:para>Whether the Firewall should block all inbound traffic for this profile.
+If not specified the value will not be changed.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Boolean</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+										<maml:name>InboundAction</maml:name>
+										<maml:description>
+											<maml:para>The default behaviour for inbound traffic with no rule. If an integer 0 or 1
+or a string "Block" or "Allow" is passed, the value will be converted to the
+FwAction Enum type.
+If not specified the value will not be changed.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">FWAction</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false">
+										<maml:name>OutboundAction</maml:name>
+										<maml:description>
+											<maml:para>The default behaviour for Outbound traffic with no rule. If an integer 0 or 1
+or a string "Block" or "Allow" is passed, the value will be converted to the
+FwAction Enum type.
+If not specified the value will not be changed.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">FWAction</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>---- Need an example ---</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code></dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Get-Firewall Config</maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									<maml:navigationLink>
+										<maml:linkText>FWPolicy object information on MSDN</maml:linkText>
+										<maml:uri>http://msdn.microsoft.com/en-us/library/aa365309(VS.85).aspx</maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Get-FirewallRule</command:name>
+										<maml:description>
+											<maml:para>Returns objects representing firewall rules</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Get</command:verb>
+										<command:noun>FireWallRule</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Returns COM objects representing firewall rules according to specified
+criteria. By default it will only return rules which are enabled, not rules
+which have been defined but not enabled.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Get-FirewallRule</maml:name>
+											<command:parameter globbing="true" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>Name</maml:name>
+												<maml:description>
+													<maml:para>Name of the rule. Wildcards are allowed. </maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue>*</dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>Direction</maml:name>
+									<maml:description>
+										<maml:para>Selects only rules affecting inbound traffic or only rules affecting
+outbound traffic.
+If an integer 1 or 2 or a string "InBound" or "OutBound" is passed, 
+the value will be converted to the FwDirection Enum type.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">FwDirection</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+									<maml:name>Protocol</maml:name>
+									<maml:description>
+										<maml:para>Selects only rules affecting a single IP protocol.
+If a valid integer or string is passed (for example 6 or "TCP"),
+ the value will be converted to the FWProtocol Enum type.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">FWProtocol</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+									<maml:name>Action</maml:name>
+									<maml:description>
+										<maml:para>Selects only rules which Block or only rules which Allow traffic.
+If an integer 0 or 1 or a string "Block" or "Allow" is passed, 
+the value will be converted to the FwAction Enum type.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">FwAction</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="true" variableLength="" position="4" required="false" pipelineInput="false">
+									<maml:name>Grouping</maml:name>
+									<maml:description>
+										<maml:para>The name used for a group of rules. Wildcards are allowed.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>*</dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="5" required="false" pipelineInput="false">
+									<maml:name>Disabled</maml:name>
+									<maml:description>
+										<maml:para>Select only rules which are defined but not enabled. 
+If not specified only enabled rules are returned</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>False</dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="true" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>Name</maml:name>
+											<maml:description>
+												<maml:para>Name of the rule. Wildcards are allowed. </maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>Direction</maml:name>
+										<maml:description>
+											<maml:para>Selects only rules affecting inbound traffic or only rules affecting
+outbound traffic.
+If an integer 1 or 2 or a string "InBound" or "OutBound" is passed, 
+the value will be converted to the FwDirection Enum type.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">FwDirection</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+										<maml:name>Protocol</maml:name>
+										<maml:description>
+											<maml:para>Selects only rules affecting a single IP protocol.
+If a valid integer or string is passed (for example 6 or "TCP"),
+the value will be converted to the FWProtocol Enum type.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">FwProtocol</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+										<maml:name>Action</maml:name>
+										<maml:description>
+											<maml:para>Selects only rules which Block or only rules which Allow traffic.
+If an integer 0 or 1 or a string "Block" or "Allow" is passed, 
+the value will be converted to the FwAction Enum type.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">FWAction</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="true" variableLength="" position="4" required="false" pipelineInput="false">
+										<maml:name>Grouping</maml:name>
+										<maml:description>
+											<maml:para>The name used for a group of rules. Wildcards are allowed.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>*</dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="5" required="false" pipelineInput="false">
+										<maml:name>Disabled</maml:name>
+										<maml:description>
+											<maml:para>Select only rules which are defined but not enabled. 
+If not specified only enabled rules are returned</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>False</dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name>Object[]</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									<maml:alert>
+										<maml:para>Any change made to a rule object takes effect immediately. </maml:para>
+									</maml:alert></maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Get-FireWallRule -grouping @FirewallAPI.dll,-28502 -disabled | foreach-object {$_.enabled = $true}</dev:code>
+											<dev:remarks>
+												<maml:para>Gets rules which have been defined as part of the File and Printer Sharing
+group, that are currently disabled, and enables them. </maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									<command:example>
+										<maml:title>---- Example 2 ----</maml:title>
+										<maml:introduction>
+											<maml:para></maml:para>
+										</maml:introduction>
+										<dev:code>Get-firewallRule | sort direction,applicationName,name |  format-table -wrap -autosize -property Name, @{Label=”Action”; expression={$Fwaction[$_.action]}},  @{label="Direction";expression={ $fwdirection[$_.direction]}}, @{Label=”Protocol”; expression={$FwProtocols[$_.protocol]}} , localPorts,applicationname</dev:code>
+										<dev:remarks>
+											<maml:para>Gets a list of Enabled rules, sorts them and displays them as a table</maml:para>
+										</dev:remarks>
+										<command:commandLines>
+											<command:commandLine>
+												<command:commandText></command:commandText>
+											</command:commandLine>
+										</command:commandLines>
+									</command:example></command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Description of the rule COM object on MSDN: </maml:linkText>
+											<maml:uri>http://msdn.microsoft.com/en-us/library/aa365344(VS.85).aspx</maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command></helpItems>

@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.12" productVersion="12.0.0" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?>
+<helpItems  xmlns="http://msh" schema="maml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-07-13T15:24:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="en-gb">
+	<command:command>
+		<command:details>
+			<command:name>Add-Driver</command:name>
+			<maml:description>
+				<maml:para>Adds a driver to the system - just a PowerShell wrapper for PNPUtil</maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Microsoft Corporation 2009</maml:para>
+			</maml:copyright>
+			<command:verb></command:verb>
+			<command:noun></command:noun>
+			<dev:version></dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>A wrapper for the pnputil command-line utility to make discovery easier 
+from PowerShell</maml:para>
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Add-driver</maml:name>
+				<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true">
+					<maml:name>Path</maml:name>
+					<maml:description>
+						<maml:para>The path to an inf file </maml:para>
+					</maml:description>
+					<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+					<dev:type>
+						<maml:name></maml:name>
+						<maml:uri></maml:uri>
+						<maml:description>
+							<maml:para></maml:para>
+						</maml:description>
+					</dev:type>
+					<dev:defaultValue></dev:defaultValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true">
+				<maml:name>Path</maml:name>
+				<maml:description>
+					<maml:para>The path to an inf file </maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:inputTypes>
+			<command:inputType>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para>Path to an INF file</maml:para>
+				</maml:description>
+			</command:inputType>
+		</command:inputTypes>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:returnValue>
+		</command:returnValues>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			
+		</maml:alertSet>
+		<command:examples>
+			<command:example>
+				<maml:title>----- Example 1 ----</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>Add-Driver "c:\drivers\video\NVLT.inf"</dev:code>
+				<dev:remarks>
+					<maml:para>Adds the drivers in the file pointed to by the inf file</maml:para>
+				</dev:remarks>
+				<command:commandLines>
+					<command:commandLine>
+						<command:commandText></command:commandText>
+					</command:commandLine>
+				</command:commandLines>
+			</command:example>
+		</command:examples>
+		<maml:relatedLinks>
+			<maml:navigationLink>
+				<maml:linkText>Get-Driver</maml:linkText>
+				<maml:uri></maml:uri>
+			</maml:navigationLink>
+		</maml:relatedLinks>
+	</command:command>
+<command:command>
+									<command:details>
+										<command:name>Get-Driver</command:name>
+										<maml:description>
+											<maml:para>Gets a list of installed drivers on the local computer</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Get</command:verb>
+										<command:noun>Driver</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Gets a list of installed drivers on the local computer</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Get-Driver</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>filter</maml:name>
+												<maml:description>
+													<maml:para>A filter, in WMI Syntax to apply to the query for drivers</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>Server</maml:name>
+									<maml:description>
+										<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>.</dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>Filter</maml:name>
+											<maml:description>
+												<maml:para>A filter, in WMI Syntax to apply to the query for drivers</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>Server</maml:name>
+										<maml:description>
+											<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>.</dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name>System.Management.ManagementObject#root\cimv2\Win32_SystemDriver</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Installed Drivers</maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Get-Driver -filter "state = 'running' "</dev:code>
+											<dev:remarks>
+												<maml:para>Returns only the drivers which are in the running state</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Add-Driver</maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									<maml:navigationLink>
+										<maml:linkText>Won32_SystemDriver WMI Class on MSDN</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Get-InstalledProduct</command:name>
+										<maml:description>
+											<maml:para>Gets a list of installed software Packages</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Get</command:verb>
+										<command:noun>InstalledProduct</command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Gets a list of installed software Packages</maml:para>
+									</maml:description>
+									<command:syntax>
+										
+									<command:syntaxItem>
+											<maml:name>Get-InstalledProduct</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>filter</maml:name>
+												<maml:description>
+													<maml:para>A filter, in WMI Syntax to apply to the query for Installed products</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>Server</maml:name>
+									<maml:description>
+										<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>.</dev:defaultValue>
+								</command:parameter></command:syntaxItem></command:syntax>
+									<command:parameters>
+										
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>Filter</maml:name>
+											<maml:description>
+												<maml:para>A filter, in WMI Syntax to apply to the query for Installed products</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter><command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>Server</maml:name>
+										<maml:description>
+											<maml:para>The name of the server where command should be run using WMI remoting.
+. or localhost can be used for the local computer.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue>.</dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name>System.Management.ManagementObject#root\cimv2\Win32_Product</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Installed Products</maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Get-InstalledProduct  -Filter "(Name = 'Microsoft Silverlight') "</dev:code>
+											<dev:remarks>
+												<maml:para>Tests to see if silverlight is installed. </maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Add-Installed Product</maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									<maml:navigationLink>
+										<maml:linkText>Remove Installed Product</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Add-InstalledProduct</command:name>
+										<maml:description>
+											<maml:para>Adds a software product to the system - just a PowerShell wrapper for MSIEXec</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb></command:verb>
+										<command:noun></command:noun>
+										<dev:version></dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>A wrapper for the MSIExec command-line utility to make discovery easier 
+from PowerShell</maml:para>
+									</maml:description>
+									<command:syntax>
+										
+									<command:syntaxItem>
+				<maml:name>Add-InstalledProduct</maml:name>
+				<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true">
+					<maml:name>Path</maml:name>
+					<maml:description>
+						<maml:para>The path to an MSI file </maml:para>
+					</maml:description>
+					<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+					<dev:type>
+						<maml:name></maml:name>
+						<maml:uri></maml:uri>
+						<maml:description>
+							<maml:para></maml:para>
+						</maml:description>
+					</dev:type>
+					<dev:defaultValue></dev:defaultValue>
+				</command:parameter>
+			</command:syntaxItem></command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true">
+											<maml:name>Path</maml:name>
+											<maml:description>
+												<maml:para>The path to an MSI file </maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name>String</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>The MSI files to install can be piped into the command</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>add-installedProduct -path foo.msi</dev:code>
+											<dev:remarks>
+												<maml:para>installs the product in foo.msi</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Get-InstalledProduct</maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									<maml:navigationLink>
+										<maml:linkText>Remove-InsalledProduct</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Remove-InstalledProduct </command:name>
+										<maml:description>
+											<maml:para>Removes an Installed product, rebooting if required</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Microsoft Corporation 2009</maml:para>
+										</maml:copyright>
+										<command:verb>Remove</command:verb>
+										<command:noun>InstalledProduct </command:noun>
+										<dev:version>1.00</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Removes an Installed product. 
+Be warned if the removal needs a reboot this will cause a clean one, but without asking. </maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Remove-InstalledProduct </maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false">
+												<maml:name>Name</maml:name>
+												<maml:description>
+													<maml:para>The name of the product to be removed </maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										</command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false">
+											<maml:name>Name</maml:name>
+											<maml:description>
+												<maml:para>The name of the product to be removed </maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name>String</maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para>Name of the product to remove</maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										<maml:alert>
+											<maml:para>If the removal needs a reboot it will happen  without prompting</maml:para>
+										</maml:alert>
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>----- Example 1 -----</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Remove-InstalledProduct -name "Microsoft SilverLight"</dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText>Add-InstalledProduct</maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									<maml:navigationLink>
+										<maml:linkText>GetInStalledProduct</maml:linkText>
+										<maml:uri></maml:uri>
+									</maml:navigationLink></maml:relatedLinks>
+								</command:command><command:command>
+		<command:details>
+			<command:name>Add-Hotfix</command:name>
+			<maml:description>
+				<maml:para>Adds a Hotfix to the system - just a PowerShell wrapper for Wusa</maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Microsoft Corporation 2009</maml:para>
+			</maml:copyright>
+			<command:verb></command:verb>
+			<command:noun></command:noun>
+			<dev:version></dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>A wrapper for the wusa command-line utility to make discovery easier 
+from PowerShell</maml:para>
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Add-driver</maml:name>
+				<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true">
+					<maml:name>Path</maml:name>
+					<maml:description>
+						<maml:para>The path to an hotfix file </maml:para>
+					</maml:description>
+					<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+					<dev:type>
+						<maml:name></maml:name>
+						<maml:uri></maml:uri>
+						<maml:description>
+							<maml:para></maml:para>
+						</maml:description>
+					</dev:type>
+					<dev:defaultValue></dev:defaultValue>
+				</command:parameter>
+			<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>NoReboot</maml:name>
+									<maml:description>
+										<maml:para>Prevents a reboot happening after hotfix is installed. 
+If not specified the hotfixes will reboot the system if required.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="true">
+				<maml:name>Path</maml:name>
+				<maml:description>
+					<maml:para>The path to an inf file </maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="">String</command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>NoReboot</maml:name>
+										<maml:description>
+											<maml:para>Prevents a reboot happening after hotfix is installed. 
+If not specified the hotfixes will reboot the system if required.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">Switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter></command:parameters>
+		<command:inputTypes>
+			<command:inputType>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para>Path to an hotfix file</maml:para>
+				</maml:description>
+			</command:inputType>
+		</command:inputTypes>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:returnValue>
+		</command:returnValues>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			
+		</maml:alertSet>
+		<command:examples>
+			<command:example>
+				<maml:title>----- Example needed</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code></dev:code>
+				<dev:remarks>
+					<maml:para></maml:para>
+				</dev:remarks>
+				<command:commandLines>
+					<command:commandLine>
+						<command:commandText></command:commandText>
+					</command:commandLine>
+				</command:commandLines>
+			</command:example>
+		</command:examples>
+		<maml:relatedLinks>
+			<maml:navigationLink>
+				<maml:linkText>Get-Hotfix</maml:linkText>
+				<maml:uri></maml:uri>
+			</maml:navigationLink>
+		</maml:relatedLinks>
+	</command:command></helpItems>
